@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { LayoutService } from './modules/shared/services/layout.service';
 
 @Component({
   selector: 'nx-root',
@@ -7,4 +8,8 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'traveller';
+  constructor(
+    layout: LayoutService
+  ) {
+  }
 }
