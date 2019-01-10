@@ -8,11 +8,11 @@ import { LayoutService } from '../services/layout.service';
 export class ContainerDirective implements OnInit {
 
   constructor(
-    layout: LayoutService
+    public layout: LayoutService
   ) {
   }
 
-  @HostBinding('class') containerClass: string;
+  @HostBinding('class') containerClass: string = this.layout.number;
 
   ngOnInit(): void {
 
